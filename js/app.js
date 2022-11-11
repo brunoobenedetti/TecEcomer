@@ -13,7 +13,7 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 
 fetch(listaProductos)
-    .then((respuesta) => respuesta.json())
+    .then((response) => response.json())
     .then((datos) => {
         datos.forEach((producto) =>{
             productos.push(producto);
