@@ -16,3 +16,26 @@ modalCarrito.addEventListener('click',(e)=>{
 contenedorModal.addEventListener('click', ()=>{
     carritoCerrar.click()
 })
+
+const btnLogin = document.getElementById("btnLogin");
+    btnLogin.addEventListener("click", () => {
+        Swal.fire( {
+            title:"Login",
+            html: `<input type="text" id="email" class="swal2-input" placeholder="Email">
+            <input type="password" id="password" class="swal2-input" placeholder="Password">`,
+            confirmButtonText: "Enviar",
+            showCancelButton: true,
+            cancelButtonText: "Cancelar",
+        }).then((result)=> {
+            if(result.isConfirmed) {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                Swal.fire( {
+                    title: "INICIANDO SESION",
+                    icon: "success",
+                    confirmButtonText: "Aceptar",
+                })
+            }
+            localStorage.setItem('Email ',' password',JSON.stringify(result.isConfirmed) )
+        })
+    })
