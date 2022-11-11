@@ -1,10 +1,11 @@
 
 const formulario = document.getElementById("formulario");
 const resultado = document.getElementById("contenedor-productos")
+
 const filtrar = () =>{
     resultado.innerHTML ='';
         const texto = formulario.value.toLowerCase();
-        let arr = []
+        let FiltradoBuscador = []
         for( let item of productos){
             
             let nombre = item.nombre.toLowerCase();
@@ -25,9 +26,9 @@ const filtrar = () =>{
             </div>
             </div>
                 `
-            arr.push(item)
+            FiltradoBuscador.push(item)
             }
-    mostrarProductos(arr)
+    mostrarProductos(FiltradoBuscador)
     }
         if(resultado.innerHTML == ''){
             resultado.innerHTML =`<li>Producto no encontrado</li>`

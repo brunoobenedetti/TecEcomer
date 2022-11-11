@@ -22,6 +22,7 @@ fetch(listaProductos)
     .catch((error) => console.log(error))
     .finally(() => 
 mostrarProductos(productos));
+
 function mostrarProductos(array){
     contenedorProductos.innerHTML= ""
     array.forEach(item => {
@@ -32,12 +33,12 @@ function mostrarProductos(array){
                     <div class="card-image">
                         <img src=${item.img}>
                         <span class="card-title">${item.nombre}</span>
-                        <a  id="agregar${item.id}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
                     </div>
                     <div class="card-content">
                         <p>${item.desc}</p>
                         <p>Marca: ${item.marca}</p>
                         <p> $${item.precio}</p>
+                        <a  id="agregar${item.id}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fi fi-sr-shopping-bag-add"></i></a>
                     </div>
                 </div>
                 `
@@ -47,6 +48,17 @@ function mostrarProductos(array){
                 agregarAlCarrito(item.id)
                 let productoAgregar = productos.find(elemento => elemento.id == item.id)
             localStorage.setItem('producto',JSON.stringify(productoAgregar))
+                Toastify({
+                    text:"Producto agregado al carrito",
+                    duration: 3000,
+                    gravity: "buttom",
+                    position: "left",
+                    style:
+                    {
+                        background: "linear-gradient(to right, #295a99,#77acf2 )",
+                    }
+                }).showToast();
+                
         })
     })
 }
