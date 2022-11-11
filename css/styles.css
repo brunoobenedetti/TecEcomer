@@ -15,16 +15,9 @@ body {
   width: 30px;
   color:rgb(9, 9, 9);
 }
-
-/* .contenedor{
-  display: flex;
-  justify-content:space-around;
-  flex-wrap:wrap;
-} */
-
 img {
   width: 100%;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px;  */
 }
 footer{
   background-color: brown;
@@ -36,6 +29,7 @@ footer{
   /* margin-bottom: 20px; */
 }
 header {
+  
   background-color: brown;
   display: flex;
   justify-content: space-between;
@@ -53,9 +47,6 @@ h1 {
   font-weight: 700;
   font-size: 50px;
 }
-.seleccion {
-  text-align: center;
-}
 #selecProduc {
   width: 50%;
 }
@@ -64,8 +55,9 @@ h1 {
   color: rgb(12, 12, 12);
   /* font-size: 40px; */
   background-color: white;
-  border-radius: 50%;
-  padding: 10px 20px;
+  /* border-radius: 50%; */
+  background: border-box;
+  padding: 8px 18px;
   transition: all 0.3s;
 }
 #boton-carrito:hover {
@@ -76,44 +68,34 @@ h1 {
 #boton-carrito:focus {
   outline: none;
 }
-
+.chan{
+    display: block;
+    position: relative; 
+    right: 0;
+    top: 0;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+}
 #contenedor-productos {
-  max-width: 1200px;
-  margin: 60px auto;
+  max-width: 1000px;
+  margin: 30px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   flex-wrap: wrap;
 }
-/* #contenedor-productos:hover{
-  box-shadow: 0 8px 16px 0  rgb(107, 16, 16);
-} */
-/* #contenedor-resultado{
-background-color: black;
-
-  max-width: 1200px;
-  margin: 60px auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; 
-} */
 p {
   line-height: 1.8;
 }
 .producto {
-  
   background-color: brown;
-  max-width: 30%;
-  padding:  2px 16px;
+  max-width: 30% ;
+  padding:  10px 20px;
   margin-bottom: 20px;
   box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .producto:hover{
   box-shadow: 0 10px 16px 0  rgb(107, 16, 16);
-}
-select {
-  display: inline;
-  text-align: center;
-  border: 1px solid lightskyblue;
 }
 .modal-contenedor {
   position: fixed;
@@ -197,9 +179,102 @@ select {
 }
 
 .boton-eliminar:hover {
+  background-color: rgb(221, 150, 150);
   cursor: pointer;
 }
 .boton-eliminar:focus {
   outline: none;
 }
+
+#btnLogin{
+  background: border-box;
+  border: none;
+  display: block;
+  position: relative; 
+  right: -4%;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+} 
+
+
+
+
+@media (max-width: 1023px){
+.nav-search input[type=text].nav-search-input, .nav-search input[type=search].nav-search-input {
+    padding-top: 5px;
+    padding-bottom: 7px; 
+  }
+}
+
+@media (max-width: 1023px){
+input[type=text].nav-search-input, input[type=search].nav-search-input {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+  }
+}
+
+@media (max-width: 1023px){
+.nav-footer, input[type=text].nav-search-input, input[type=search].nav-search-input {
+    background-color: #fff;
+  }
+}
+
+input[type=text].nav-search-input, input[type=search].nav-search-input {
+  background-color: rgba(255,255,255,.7);
+  border: none; 
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 915;
+}
+input[type=text].nav-search-input, input[type=search].nav-search-input {
+  border: 0 rgba(0,0,0,.2);
+  color: #333;
+  font-size: 16px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  background-color: #fff; 
+  padding: 6px 6px 6px 35px; 
+  -webkit-box-shadow: none;
+  box-shadow: none; 
+  font-family: inherit;
+}
+
+input[type="search" i] {
+  appearance: auto;
+  box-sizing: border-box;
+  padding: 1px 2px;
+}
+user agent stylesheet
+input {
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+
 
